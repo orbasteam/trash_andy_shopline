@@ -32,6 +32,10 @@ def lambda_handler(data, context):
                     pass
             elif is_number(first_text) and len(array_text) == 2:
                 text = guess_password(int(first_text))
+            elif 'alvin' in first_text:
+                text = '禿驢'
+            elif 'DROP' or 'DELETE' or 'HELP' or 'help' in first_text:
+                text = '你媽個b'
 
             post_message(text, slack_event["channel"])
 
