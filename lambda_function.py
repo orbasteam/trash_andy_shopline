@@ -43,7 +43,7 @@ def lambda_handler(data, context):
                           ':alvinstrong:',
                           ':alvinwithmeimei:',
                           ':alvinwtf:']
-                text = '禿驢' + random.choice(alvins)
+                text = '禿驢 ' + random.choice(alvins)
             elif 'DROP' or 'DELETE' or 'HELP' or 'help' in first_text:
                 text = '你媽個b'
 
