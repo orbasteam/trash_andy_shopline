@@ -33,18 +33,17 @@ def lambda_handler(data, context):
             elif is_number(first_text) and len(array_text) == 2:
                 text = guess_password(int(first_text))
             elif 'alvin' in first_text:
-                alvins = [':alvinbigmuscle:',
-                          ':alvincatchmeifucan:',
-                          ':alvincentcatchweifucan:',
-                          ':alvinmuscle:',
-                          ':alvinpopping:',
-                          ':alvinspecial:',
-                          ':alvinstaring:',
-                          ':alvinstrong:',
-                          ':alvinwithmeimei:',
-                          ':alvinwtf:']
-                text = '禿驢 ' + random.choice(alvins)
-            elif 'DROP' or 'DELETE' or 'HELP' or 'help' in first_text:
+                emoji = ('bigmuscle',
+                         'catchmeifucan',
+                         'centcatchweifucan',
+                         'muscle',
+                         'popping',
+                         'special',
+                         'staring',
+                         'strong',
+                         'withmeim')
+                text = f'禿驢 :avlin{random.choice(emoji)}:'
+            elif first_text in ('DROP', 'DELETE', 'HELP', 'help'):
                 text = '你媽個b'
 
             post_message(text, slack_event["channel"])
