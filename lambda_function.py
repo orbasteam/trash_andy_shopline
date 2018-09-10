@@ -33,7 +33,17 @@ def lambda_handler(data, context):
             elif is_number(first_text) and len(array_text) == 2:
                 text = guess_password(int(first_text))
             elif 'alvin' in first_text:
-                text = '禿驢'
+                alvins = [':alvinbigmuscle:',
+                          ':alvincatchmeifucan:',
+                          ':alvincentcatchweifucan:',
+                          ':alvinmuscle:',
+                          ':alvinpopping:',
+                          ':alvinspecial:',
+                          ':alvinstaring:',
+                          ':alvinstrong:',
+                          ':alvinwithmeimei:',
+                          ':alvinwtf:']
+                text = '禿驢' + random.choice(alvins)
             elif 'DROP' or 'DELETE' or 'HELP' or 'help' in first_text:
                 text = '你媽個b'
 
