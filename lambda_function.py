@@ -45,6 +45,8 @@ def lambda_handler(data, context):
                 text = f'禿驢 :alvin{random.choice(emoji)}:'
             elif first_text in ('DROP', 'DELETE', 'HELP', 'help'):
                 text = '你媽個b'
+            else:
+                text = " ".join(array_text[1:])
 
             post_message(text, slack_event["channel"])
 
