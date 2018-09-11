@@ -42,7 +42,7 @@ def lambda_handler(data, context):
                          'staring',
                          'strong',
                          'withmeim')
-                text = f'禿驢 :avlin{random.choice(emoji)}:'
+                text = f'禿驢 :alvin{random.choice(emoji)}:'
             elif first_text in ('DROP', 'DELETE', 'HELP', 'help'):
                 text = '你媽個b'
 
