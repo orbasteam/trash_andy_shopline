@@ -4,6 +4,7 @@ import os
 import logging
 import urllib
 import random
+import re
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
@@ -45,6 +46,10 @@ def lambda_handler(data, context):
                 text = f'禿驢 :alvin{random.choice(emoji)}:'
             elif first_text in ('DROP', 'DELETE', 'HELP', 'help'):
                 text = '你媽個b'
+            elif re.search('(.+)要什麼', first_text):
+                match = re.search('(.+)要什麼', first_text).groups()[0]
+                text = random.choice(['要發財', '要發大財'])
+                text = "{}{}".format(match, text)
             else:
                 text = " ".join(array_text[1:])
 
